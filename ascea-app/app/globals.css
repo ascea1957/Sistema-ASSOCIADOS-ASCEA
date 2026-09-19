@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+body { @apply bg-slate-50 text-slate-800 antialiased; }
+
+@layer components {
+  .campo {
+    @apply w-full rounded-lg border border-slate-300 px-3 py-2.5 text-[15px]
+           outline-none transition focus:border-ascea-500 focus:ring-2 focus:ring-ascea-100
+           disabled:bg-slate-100 disabled:text-slate-500;
+  }
+  .rotulo { @apply mb-1.5 block text-sm font-medium text-slate-700; }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5
+           text-[15px] font-medium transition disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primario { @apply btn bg-ascea-600 text-white hover:bg-ascea-700; }
+  .btn-secundario { @apply btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-50; }
+  .btn-perigo { @apply btn border border-red-300 bg-white text-red-700 hover:bg-red-50; }
+  .cartao { @apply rounded-xl border border-slate-200 bg-white shadow-sm; }
+  .etiqueta { @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium; }
+  .aviso { @apply rounded-lg border px-4 py-3 text-sm; }
+}
